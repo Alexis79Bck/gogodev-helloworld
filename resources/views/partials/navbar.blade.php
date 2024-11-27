@@ -1,27 +1,21 @@
-<header class="header-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <ul class="nav">
-                        <li >
-                            <a href="{{ route('index') }}">Index</a>
-                        </li>
-                        <li class="scroll-to-section">
-                            <a href="{{ route('landing.about') }}">About</a>
-                        </li>
-                        <li class="scroll-to-section">
-                            <a href="{{ route('landing.services') }}">Services</a>
-                        </li>
-                        <li class="scroll-to-section">
-                            <a href="{{ route('landing.blog') }}">Blog</a>
-                        </li>
-                        <li class="scroll-to-section">
-                            <a href="{{ route('landing.contact') }}">Contact Us</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
+<div class="container-fluid position-relative bg-primary p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0" >
+        <ul class="navbar-nav ms-auto py-0">
+            <li class="nav-item ">
+                <a href="{{ route('index') }}" class="nav-link">Index</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('landing.about') }}" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('landing.services') }}" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('landing.blog') }}" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ route('landing.contact') }}" class="nav-link">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+</div>
