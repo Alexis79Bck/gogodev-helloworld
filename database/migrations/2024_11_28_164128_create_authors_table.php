@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('notes', function (Blueprint $table) {
+        Schema::create('authors', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 100);
-            $table->string('description')->nullable();
-            $table->date('deadline');
-            $table->boolean('done')->default(false);
+            $table->string('first_name', 30);
+            $table->string('last_name', 30);
+            $table->date('birthday');
+            $table->enum('gender', ['Hombre', 'Mujer']);
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('notes');
+        Schema::dropIfExists('authors');
     }
 };
