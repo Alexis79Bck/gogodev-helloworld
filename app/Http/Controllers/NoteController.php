@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Note;
 use Illuminate\Http\Request;
 
 class NoteController extends Controller
@@ -11,7 +12,8 @@ class NoteController extends Controller
      */
     public function index()
     {
-        //
+        $notes = Note::all();
+        return view('prueba.notes.index', compact('notes'));
     }
 
     /**
@@ -19,7 +21,7 @@ class NoteController extends Controller
      */
     public function create()
     {
-        //
+        return view('prueba.notes.create');
     }
 
     /**
@@ -33,9 +35,9 @@ class NoteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        return "desde metodo show - " . $id;
     }
 
     /**
@@ -60,5 +62,13 @@ class NoteController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+     /**
+     * Display the specified resource.
+     */
+    public function example()
+    {
+        return "Hello Example";
     }
 }

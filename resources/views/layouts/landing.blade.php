@@ -6,18 +6,31 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>@yield('title') | GOGODEV - Laravel</title>
 
-        @include('layouts.includes.styles')
+        
+
+        @include('layouts.includes.landing.styles')
         
     </head>
     <body>
+        <!-- Spinner Start -->
+        @include('partials.landing.spinner')
+        <!-- Spinner End -->
+
+         <!-- Navbar & Hero Start -->
+         <div class="container-xxl position-relative p-0">
+            
+            @include('partials.landing.navbar')
+
+            @yield('hero-section')
+            @yield('breadcrumb')
+        </div>
+        <!-- Navbar & Hero End -->
         
-        @include('partials.navbar')
-        {{-- @yield('carousel') --}}
         
 
         @yield('content')
        
 
-        @include('layouts.includes.scripts')
+        @include('layouts.includes.landing.scripts')
     </body>
 </html>
