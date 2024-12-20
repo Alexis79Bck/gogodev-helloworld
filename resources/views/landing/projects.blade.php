@@ -1,6 +1,6 @@
 @extends('layouts.landing')
 
-@section('title', 'Servicios')
+@section('title', 'Proyectos')
 
 @section('hero-section')
 
@@ -9,7 +9,7 @@
         
         <div class="row g-2 py-2">
             <div class="col-12 text-center">
-                <h1 class="text-white animated slideInDown">Servicios</h1>
+                <h1 class="text-white animated slideInDown">Proyectos</h1>
                 <hr class="bg-white mx-auto mt-0" style="width: 120px;">
             </div>
         </div>

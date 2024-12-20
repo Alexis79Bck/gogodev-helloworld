@@ -11,26 +11,30 @@
         @include('layouts.includes.landing.styles')
         
     </head>
-    <body>
-        <!-- Spinner Start -->
-        @include('partials.landing.spinner')
-        <!-- Spinner End -->
-
-         <!-- Navbar & Hero Start -->
-         <div class="container-xxl position-relative p-0">
+    <body class="bg-white">
+        <div class="container-xxl p-0">
+            <!-- Spinner Start -->
+            @include('partials.landing.spinner')
+            <!-- Spinner End -->
             
-            @include('partials.landing.navbar')
+            <!-- Navbar & Hero Start -->
+            <div class="container-xxl position-relative p-0">
+                
+                @include('partials.landing.navbar')
+                
+                <div class="container-xxl bg-primary hero-header">
+                    @yield('hero-section')
+                </div>
+            </div>
+            <!-- Navbar & Hero End -->
 
-            @yield('hero-section')
-            @yield('breadcrumb')
+            <!-- Content Section End-->            
+            <div class="container-xxl py-5">
+                    @yield('content')
+                </div>
+            </div>
+            <!-- Content Section End-->
         </div>
-        <!-- Navbar & Hero End -->
-        
-        
-
-        @yield('content')
-       
-
         @include('layouts.includes.landing.scripts')
     </body>
 </html>
