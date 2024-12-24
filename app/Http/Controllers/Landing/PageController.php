@@ -12,6 +12,11 @@ class PageController extends Controller
 {
     public function index()
     {
+        return view('index');
+    }
+
+    public function about()
+    {
         $skills = Skill::cases();
         $fundamentals = Fundamental::cases();
         $techStack = TechStack::cases();
@@ -38,9 +43,7 @@ class PageController extends Controller
             $delay += 0.3;
         }
 
-
-
-        return view('index', compact(
+        return view('landing.about', compact(
             'skills', 
             'fundamentals', 
             'techStack', 

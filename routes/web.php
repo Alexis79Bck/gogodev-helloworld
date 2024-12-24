@@ -6,9 +6,8 @@ use App\Http\Controllers\Landing\PageController;
 use Illuminate\Support\Facades\Route;
 
 
-// Route::view('/', 'index')->name('home');
 Route::get('/', [PageController::class, 'index'])->name('home');
-Route::view('/about', 'landing.about')->name('landing.about');
+Route::get('/sobre-mi', [PageController::class, 'about'])->name('landing.about');
 Route::view('/services', 'landing.services')->name('landing.services');
 Route::view('/projects', 'landing.projects')->name('landing.projects');
 Route::view('/blog', 'landing.blog')->name('landing.blog');

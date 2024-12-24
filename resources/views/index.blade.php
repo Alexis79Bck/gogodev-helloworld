@@ -2,81 +2,46 @@
 
 @section('title', 'Index')
 
-@section('carousel')
-    @include('partials.landing.carousel')
-@endsection
+
 
 @section('content')
-    <div class="container-fluid py-5 px-lg-5" >
-        <div class="row g-4">
+@include('partials.landing.animated-background')
+    <div class="container-fluid d-flex py-5 px-lg-5" >
+        <div class="row align-content-middle  g-4">
             <div class="col-lg-6">
-                <p class="section-title text-secondary">Habilidades<span></span></p>
+                <p>
+                    <img class="img-thumbnail  m-auto" src="{{ asset('assets/images/pages/home/php-laravel-development.jpg') }}" />
+                </p>
             </div>
-        </div>
-                
-        <div class="row d-flex justify-content-between align-content-center g-2" >
-            @foreach ($skills as $skill)                
-                <div class="col-lg-4 col-md-4 col-sm wow fadeInUp" data-wow-delay="{{ $delaysSkill[$skill->name] }}s">
-                    <a href="#" class="mr-2">
-                        <div class="h-100 card btn rounded rounded-4 ">
-                            <img height="156px" class="card-img-top mx-auto" src="{{ asset('assets/images/pages/home/' . $skill->details()['image']) }}" alt="{{ $skill->details()['image'] }}">
-                            <div class="card-body ">                            
-                                <p class="card-text">{{ $skill->details()['description'] }}</p>
-                            </div>
-                        </div>
-                    </a>                    
-                </div>            
-            @endforeach
-        </div>
-        <hr width="100%" size="2" color="black">
-        <div class="row g-4">
             <div class="col-lg-6">
-                <p class="section-title text-secondary">Principios y Fundamentos<span></span></p>
+                <p >
+                    Cómo apasionado por la innovación y la creación de soluciones digitales que resuelven problemas reales. 
+                    Mi conjunto de habilidades técnicas me permite abordar proyectos desafiantes desde el backend hasta el frontend, 
+                    siempre con un enfoque centrado en la experiencia del usuario.
+                </p>
+                <p>
+                    Como desarrollador web full-stack, aplicando principios de arquitectura limpia y mejores prácticas de desarrollo. 
+                    Mi sólida base en POO, Patrones de Diseño y Principios SOLID me permite escribir código mantenible, extensible y fácil de entender. 
+                    Utilizo Laravel Framework como mi principal herramienta de desarrollo backend, complementándolo con Laravel Livewire para interfaces dinámicas y Vue.js para un frontend moderno y reactivo.
+                </p>
+                    <ul>
+                        <li>
+                            Desarrollo Backend: PHP, Laravel Framework, arquitectura de APIs, gestión de bases de datos relacionales, seguridad web.
+                        </li>
+                        <li>Desarrollo Frontend: HTML, CSS, JavaScript, frameworks modernos (laravel livewire, vue, react), optimización de rendimiento frontend.</li>
+                        <li>Experiencia de Usuario: Diseño de interfaces intuitivas, investigación de usuarios, pruebas A/B.</li>
+                    </ul>
+                    Me considero un aprendiz constante y me mantengo al día con las últimas tecnologías y tendencias del desarrollo web para ofrecer soluciones vanguardistas.
+                </p>
             </div>
-        </div>
-                
-        <div class="row d-flex justify-content-between align-content-center g-2" >
-            @foreach ($fundamentals as $fundamental)                
-                <div class="col-lg-4 col-md-4 col-sm wow fadeInUp" data-wow-delay="{{ $delaysFundamental[$fundamental->name] }}s">
-                    <a href="#" class="mr-2">
-                        <div class="h-100 card  btn rounded rounded-4 ">
-                            <img class="card-img-top mx-auto" src="{{ asset('assets/images/pages/home/' . $fundamental->details()['image']) }}" alt="{{ $fundamental->details()['image'] }}">
-                            <div class="card-body ">                            
-                                <p class="card-text">{{ $fundamental->details()['description'] }}</p>
-                            </div>
-                        </div>
-                    </a>                    
-                </div>            
-            @endforeach
         </div>
 
-        <hr width="100%" size="2" color="black">
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <p class="section-title text-secondary">Tecnologías<span></span></p>
-            </div>
-        </div>
-        <div class="row d-flex justify-between align-center g-2" >
-            @foreach ($techStack as $tech)                
-                <div class="col-lg-4 col-md-4 col-sm wow fadeInUp" data-wow-delay="{{ $delaysTechStack[$tech->name] }}s">
-                    <a href="#" class="mr-2">
-                        <div class="h-100 card  btn rounded rounded-4 ">
-                            <img height="128px" width="188px"  class="card-img-top mx-auto" src="{{ asset('assets/images/pages/home/' . $tech->details()['image']) }}" alt="{{ $tech->details()['image'] }}">
-                            <div class="card-body ">                            
-                                <p class="card-text">{{ $tech->details()['description'] }}</p>
-                            </div>
-                        </div>
-                    </a>                    
-                </div>            
-            @endforeach
-        </div>
     </div>
 
 @endsection
 
 @section('hero-section')
-
-    
+<div class="container-fluid py-5 px-lg-5" >
     <div class="container px-lg-5">
         @include('partials.landing.animated-background')
         <div class="row g-4">
