@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>@yield('title') | GOGODEV - Laravel</title>
+        <title>@yield('title') | {{ config('app.name') }}</title>
 
         
 
@@ -22,16 +22,16 @@
                 
                 @include('partials.landing.navbar')
                 
-                <div class="container-xxl bg-primary hero-header">
-                    @yield('hero-section')
-                </div>
+                @yield('hero-section')
+               
             </div>
             <!-- Navbar & Hero End -->
+
 
             <!-- Content Section End-->            
             <div class="container-xxl py-5">
                     @yield('content')
-                </div>
+                
             </div>
             <!-- Content Section End-->
         </div>
